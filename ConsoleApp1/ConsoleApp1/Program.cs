@@ -100,49 +100,40 @@ namespace ConsoleApp1
                 case 8:
                 case 10:
                 case 12:
-
                     if (day < 31)
                     {
                         Console.WriteLine($"перед цим було:{day + 1}/{month}");
                     }
                     else
                     {
-                        Console.WriteLine("перед цим було:31/7");
-                    }
-                    else if (month == 1)
-                    {
-                        Console.WriteLine("перед цим було:31/12");
-                    }
-                    else if (month == 2)
-                    {
-                        Console.WriteLine("перед цим було:28/2");
+                        Console.WriteLine($"перед цим було:1/{month + 1}");
                     }
                     break;
                 case 4:
                 case 6:
                 case 9:
                 case 11:
-                    if (day > 2)
+                    if (day < 30)
                     {
-                        Console.WriteLine($"перед цим було:{day - 1}/{month}");
+                        Console.WriteLine($"перед цим було:{day + 1}/{month}");
                     }
                     else
                     {
-                        Console.WriteLine($"перед цим було:31/{month - 1}");
+                        Console.WriteLine($"перед цим було:1/{month + 1}");
                     }
-
                     break;
 
                 case 2:
-                    if (day > 2)
+                    if (day < 28)
                     {
-                        Console.WriteLine($"перед цим було:{day - 1}/{month}");
+                        Console.WriteLine($"перед цим було:{day + 1}/{month}");
                     }
                     else
                     {
-                        Console.WriteLine("перед цим було:31/1");
+                        Console.WriteLine($"перед цим було:1/{month + 1}");
                     }
                     break;
+                
                 default:
                     Console.WriteLine("Помилка. Bad to bones");
                     break;
